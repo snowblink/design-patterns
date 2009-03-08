@@ -60,10 +60,15 @@ module Chapter04B
   end
   
   class NYStylePizzaStore < PizzaStore
+    attr_accessor :ingredient_factory
+    def initialize
+      @ingredient_factory = NYPizzaIngredientFactory.new
+      super
+    end
     def create_pizza(pizza_type)
       case pizza_type
       when :cheese
-        return NYStyleCheesePizza.new
+        return CheesePizza.new(@ingredient_factory)
       end
     end
   end
