@@ -40,21 +40,30 @@ module Chapter04B
   end
 
   class CheesePizza < Pizza
-  end
+    attr_accessor :ingredient_factory
+    def initialize(ingredient_factory)
+      @ingredient_factory = ingredient_factory
+    end
 
-  class NYStyleCheesePizza < CheesePizza
     def prepare
-      @dough = NYPizzaIngredientFactory.new.create_dough
+      @dough = ingredient_factory.create_dough
     end
   end
 
+  class NYStyleCheesePizza < CheesePizza
+    def initialize
+      super(NYPizzaIngredientFactory.new)
+    end
+  end
+
+  class ChicagoCheesePizza < CheesePizza
+  end
+  
   class NYStylePizzaStore < PizzaStore
     def create_pizza(pizza_type)
       case pizza_type
       when :cheese
         return NYStyleCheesePizza.new
-      else
-        :moo
       end
     end
   end
