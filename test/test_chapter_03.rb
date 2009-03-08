@@ -32,6 +32,10 @@ class TestChapter03 < Test::Unit::TestCase
     should "cost 2.40" do
       assert_in_delta 0.01, 2.40, @espresso.cost
     end
+    
+    should "display a chained description" do
+      assert_equal "Espresso, Mocha, Mocha", @espresso.description
+    end
   end
       
 end

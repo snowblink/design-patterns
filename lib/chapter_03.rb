@@ -20,6 +20,7 @@ class Espresso < Beverage
   end
 end
 
+require 'forwardable'
 class Condiment < Beverage
   class Mocha
     attr_accessor :beverage
