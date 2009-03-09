@@ -19,13 +19,9 @@ class TestChapter05 < Test::Unit::TestCase
   
   context "A Chocolate Boiler" do
     setup do
-      @boiler = ChocolateBoiler.new
+      @boiler = ChocolateBoiler.get_instance
     end
-    should "be empty and not boiled" do
-      assert @boiler.empty, "Boiler should be empty"
-      assert !@boiler.boiled, "Boiler should not be boiled"
-    end
-    
+        
     should "be empty to able to be filled" do
       @boiler.empty = true
       assert @boiler.empty, "Boiler should be empty"
