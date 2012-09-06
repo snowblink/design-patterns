@@ -1,12 +1,5 @@
-require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
-require 'redgreen'
+require 'rspec/core/rake_task'
 
-task :default => [:test]
+RSpec::Core::RakeTask.new(:spec)
 
-Rake::TestTask.new do |t|
-  t.libs << "lib"
-  t.test_files = FileList['test/test*.rb']
-  t.verbose = true
-end
+task :default => :spec
