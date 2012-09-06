@@ -1,1 +1,2 @@
-require "#{File.dirname(__FILE__)}/../lib/chapter_01"
+require 'chapter_01'
+require 'chapter_02'
