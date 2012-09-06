@@ -44,7 +44,7 @@ describe Duck do
     end
     
     it "displays" do
-      assert_equal :mallard_display, @mallard.display
+      @mallard.display.should == :mallard_display
     end
   end
   
@@ -56,7 +56,7 @@ describe Duck do
     end
     
     it "displays" do
-      assert_equal :redhead_display, @redhead.display
+      @redhead.display.should == :redhead_display
     end
   end
   
@@ -66,7 +66,7 @@ describe Duck do
     end
     
     it "does not fly" do
-      assert_equal :no_way, @rubber_duck.fly
+      @rubber_duck.fly.should == :no_way
     end
   end
   
@@ -76,12 +76,12 @@ describe Duck do
     end
     
     it "does not fly" do
-      assert_equal :no_way, @model_duck.fly
+      @model_duck.fly.should == :no_way
     end
     
     it "flys if given a rocket" do
       @model_duck.flying_behaviour = DuckBehaviour::FlyingBehaviour::FlyRocketPowered.new
-      assert_equal :flying_powered_by_rocket, @model_duck.fly
+      @model_duck.fly.should == :flying_powered_by_rocket
     end
   end
 end
