@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/snowblink/design-patterns.png?branch=travis-ci,master)](http://travis-ci.org/snowblink/design-patterns)
+[![Build Status](https://secure.travis-ci.org/snowblink/design-patterns.png)](http://travis-ci.org/snowblink/design-patterns)
 
 # Design Patterns
 
