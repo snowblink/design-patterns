@@ -1,7 +1,6 @@
-# Design Patterns
+[![Build Status](https://secure.travis-ci.org/snowblink/design-patterns.png?branch=travis-ci,master)](http://travis-ci.org/snowblink/design-patterns)
 
-# Build Status
-[![Build Status](https://secure.travis-ci.org/snowblink/design-patterns.png?branch=travis-ci)](http://travis-ci.org/snowblink/design-patterns)
+# Design Patterns
 
 ## Aim
 To go through the book Head First Design Patterns, but to use Ruby instead of Java.
