@@ -40,29 +40,29 @@ module Chapter05
 
     attr_accessor :empty, :boiled
     def fill
-      if is_empty?
+      if empty?
         @empty = false
         @boiled = false
       end
     end
 
     def drain
-      if(!is_empty? && is_boiled?)
+      if(!empty? && boiled?)
         @empty = true
       end
     end
 
     def boil
-      if(!is_empty? && !is_boiled?)
+      if(!empty? && !boiled?)
         @boiled = true
       end
     end
 
-    def is_empty?
+    def empty?
       empty
     end
 
-    def is_boiled?
+    def boiled?
       boiled
     end
   end
